@@ -39,7 +39,7 @@
       },
       "autoGenerateChatTitle": {
         "label": "채팅 제목 자동 생성",
-        "description": "활성화 시 새 채팅 제목이 자동으로 생성됩니다. 온라인 모델 사용 시 첫 두 메시지를 기반으로 제목이 생성되며, 로컬 모델 사용 시 항상 활성화되어 토큰 사용량이 증가할 수 있습니다."
+        "description": "활성화하면 새 채팅 제목이 자동으로 생성됩니다. 온라인 모델 사용 시 첫 두 메시지를 기반으로 제목이 생성되며, 로컬 모델 사용 시 항상 활성화되어 토큰 사용량이 증가할 수 있습니다."
       },
       "enableLinksInChatMessages": {
         "label": "채팅 메시지 내 링크 활성화",
@@ -183,7 +183,7 @@
         },
         "uninstallService": {
           "label": "로컬 AI 서비스를 제거하시겠습니까?",
-          "description": "모델은 삭제되지 않지만 서비스 재설치 전까지 다운로드된 모델 사용이 중지됩니다."
+          "description": "모델은 삭제되지 않습니다. 하지만 서비스를 재설치할 때까지 다운로드된 모델을 사용할 수 없습니다."
         }
       },
       "serviceConfigurations": {
@@ -199,7 +199,7 @@
         },
         "maximumLoadedModels": {
           "label": "최대 로드 모델 수",
-          "description": "동시에 메모리에 로드할 LLM 최대 수 (응답 속도 향상 but 리소스 사용 증가)"
+          "description": "동시에 메모리에 로드할 LLM 최대 수 (응답 속도 향상되나 리소스 사용 증가)"
         },
         "enableNetworkAccess": {
           "label": "네트워크 접근 허용",
@@ -254,10 +254,10 @@
       "filterAvailableModels": "모델 검색",
       "description": {
         "whereToGetKey": "API 키는 공급자 웹사이트에서 얻을 수 있습니다.",
-        "whereItsStored": "API 키는 운영체제 키체인에 안전하게 저장됩니다. Linux 키링 문제 발생 시 앱 데이터베이스에 저장할 수 있습니다(보안 약화).",
+        "whereItsStored": "API 키는 운영체제 키체인에 안전하게 저장됩니다. Linux 키링에 문제가 발생하면 앱 데이터베이스에 저장할 수 있습니다(보안 약화).",
         "linuxKeyringConfiguration": "Linux 키링 구성 문제 발생 시 대체 저장 방법 사용 가능",
-        "keyHintInfo": "{keyHint}는 힌트일 뿐이며 실제 키는 키체인에 안전하게 저장됩니다. 키 업데이트 시 새 키 입력 후 업데이트 버튼 클릭",
-        "ifOllamaOrMstyRemote": "자동 모델 가져오기를 위해 API 키 재입력 필요"
+        "keyHintInfo": "{keyHint}는 힌트일 뿐이며 실제 키는 키체인에 안전하게 저장됩니다. 키를 업데이트할 때는 새 키를 입력한 후 업데이트 버튼을 클릭하세요.",
+        "ifOllamaOrMstyRemote": "자동 모델 가져오기를 위해 API 키를 재입력해야 합니다"
       },
       "addItem": {
         "success": "{providerName} 모델 공급자 추가됨"
@@ -277,10 +277,10 @@
       "fetchModels": {
         "label": "모델 가져오기",
         "refetchModels": "모델 다시 가져오기",
-        "description": "유효한 엔드포인트 입력 후 모델 가져오기 시도",
+        "description": "유효한 엔드포인트 입력 후 모델 가져오기를 시도합니다",
         "noModelsAvailable": "사용 가능한 모델 없음",
         "error": "모델을 가져올 수 없습니다. 엔드포인트를 확인하세요.",
-        "info": "{endpoint}에서 모델 가져오기 시도 중"
+        "info": "{endpoint}에서 모델 가져오기를 시도하고 있습니다"
       },
       "openAICompatibleUrlInfo": "http:// 또는 https:// 포함 필수",
       "customModels": {
@@ -329,7 +329,7 @@
       "aurumLifetime": {
         "label": "Aurum 평생 이용권",
         "description": "일회성 구매로 Msty의 모든 프리미엄 기능을 영구히 이용",
-        "notASubscription": "참고: 이는 구독이 아닌 일회성 구매이며 Aurum 라이선스에서 업그레이드 불가",
+        "notASubscription": "참고: 이것은 구독이 아닌 일회성 구매입니다. Aurum 라이선스에서 업그레이드할 수 없습니다.",
         "join": "클럽 가입",
         "activate": {
           "label": "Aurum 평생 라이선스 활성화",
@@ -339,7 +339,7 @@
         "activated": {
           "label": "Aurum 평생 접근",
           "description": "Aurum 평생 클럽의 일원이 되셨습니다! 지속적인 기능 개선을 지원해주셔서 감사합니다.",
-          "additionalNote": "여러분의 지원이 외부 영향 없이 새로운 기능 개발에 집중할 수 있게 합니다."
+          "additionalNote": "여러분의 지원 덕분에 외부 영향 없이 새로운 기능 개발에 집중할 수 있습니다."
         }
       }
     }
@@ -363,7 +363,7 @@
         "description": "{action} 선택 시 로컬 AI 모델 디렉토리에 심볼릭 링크 생성 (원본 파일 이동/삭제 시 사용 불가)"
       },
       "copy": {
-        "description": "{action} 선택 시 모델 복사본 생성 (추가 저장 공간 사용 but 원본 파일 영향 없음)"
+        "description": "{action} 선택 시 모델 복사본 생성 (추가 저장 공간 사용하나 원본 파일 영향 없음)"
       }
     }
   },
@@ -373,11 +373,11 @@
   "vaporMode": {
     "label": "베이퍼 모드",
     "description": "활성화 시 대화 기록이 저장되지 않고 종료 시 사라집니다",
-    "isEnabledDescription": "베이퍼 모드 활성화 중"
+    "isEnabledDescription": "베이퍼 모드가 활성화되었습니다"
   },
   "keyboardAndMouse": {
     "keyPlusClick": "키 + 클릭",
-    "clickToEdit": "클릭하여 편집",
+    "clickToEdit": "클릭해서 편집",
     "chatSelection": {
       "adjacent": "폴더 내 인접 대화 선택",
       "nonAdjacent": "비인접 대화 선택"
@@ -392,7 +392,7 @@
       "navigateBetweenMessages": "메시지 간 이동"
     },
     "selection": "선택 | 선택",
-    "dropHere": "여기에 드롭"
+    "dropHere": "여기에 놓으세요"
   },
   "aurumPerk": {
     "label": "Aurum 혜택",
@@ -593,7 +593,7 @@
     "inputBox": {
       "placeholder": {
         "focused": "메시지를 입력하세요",
-        "unfocused": "/를 눌러 입력창에 포커스"
+        "unfocused": "/를 눌러 입력창에 포커스하세요"
       }
     },
     "shareWithSyncedSplits": "동기화된 분할창과 공유",
@@ -627,7 +627,7 @@
         "item1": "DeepSeek R1, Meta Llama3.3 등 모델 사용",
         "item2": "오프라인 채팅 가능",
         "item3": "무료 모델 사용 및 다운로드",
-        "item4": "전문 모델 설치"
+        "item4": "특화된 모델 설치"
       },
       "cons": {
         "item1": "추가 저장 공간 및 메모리 필요"
@@ -641,17 +641,17 @@
       },
       "cons": {
         "item1": "인터넷 연결 필요",
-        "item2": "공급자별 요금 적용 가능"
+        "item2": "공급자별 비용이 적용될 수 있음"
       }
     },
     "downloadModel": {
       "description": "{modelSize} 크기의 {modelName} 모델 다운로드 (로컬에 없을 경우에만)"
     },
     "inProgress": {
-      "description": "인터넷 속도에 따라 수 분 소요 (10-15분 초과 시 앱 재시작 권장)"
+      "description": "인터넷 속도에 따라 수 분이 소요됩니다 (10-15분을 초과하면 앱 재시작을 권장합니다)"
     },
     "onboardWithOllama": {
-      "label": "Ollama 사용 중이신가요?",
+      "label": "Ollama를 사용 중이신가요?",
       "description": "{folderPath}에서 Ollama 모델로 빠르게 시작하기"
     },
     "success": "설정 완료! 이제 채팅을 시작할 수 있습니다."
@@ -703,7 +703,7 @@
       "confirmation": "{workspaceName} 작업공간을 제거하시겠습니까?",
       "description": "디스크 데이터는 삭제되지 않습니다.",
       "withDataFolder": {
-        "label": "데이터 폴더도 삭제 (복구 불가)",
+        "label": "데이터 폴더도 삭제합니다 (복구 불가)",
         "description": "{folderPath} 데이터 폴더 영구 삭제",
         "warning": "{folderPath} 데이터 폴더 삭제 경고"
       }
@@ -735,7 +735,7 @@
   "seeWhatsNew": "최신 버전의 새로운 기능 확인하기",
   "appUpdate": {
     "latestVersionBeingDownloaded": "Msty 최신 버전 {version} 다운로드 중. 잠시 기다려주세요.",
-    "latestVersionBeingInstalled": "Msty 최신 버전 {version} 설치 중. 자동 재시작됩니다.",
-    "latestVersionReadyToBeInstalled": "Msty 최신 버전 {version} 설치 준비 완료. 설치 버튼을 클릭하세요."
+    "latestVersionBeingInstalled": "Msty 최신 버전 {version}을 설치하고 있습니다. 자동으로 재시작됩니다.",
+    "latestVersionReadyToBeInstalled": "Msty 최신 버전 {version} 설치 준비가 완료되었습니다. 설치 버튼을 클릭하세요."
   }
 }
